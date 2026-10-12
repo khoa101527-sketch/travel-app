@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --stage: #0e1730;
+  --stage-2: #193376;
+}
+html, body, #root { height: 100%; margin: 0; }
+body {
+  background: radial-gradient(120% 80% at 50% 0%, var(--stage-2) 0%, var(--stage) 70%);
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+/* The design is a fixed 390×844 frame; App scales it to fit the viewport. */
+.phone {
+  width: 390px; height: 844px; position: relative; overflow: hidden;
+  border-radius: 44px; background: #fff; transform-origin: top left;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.55), 0 0 0 10px #0b1226;
+}
+.phone.bare { border-radius: 0; box-shadow: none; }
+.screen { position: absolute; inset: 0; }
+.hot { cursor: pointer; }
+.hot:active { filter: brightness(.94); }
